@@ -5,8 +5,10 @@ import { positiveMod } from "~/helpers/math.js"
 import agenciesImage from "../_assets/example-agencies.png"
 import blogsImage from "../_assets/example-blogs.png"
 import eCommerceImage from "../_assets/example-e-commerce.webp"
-import marketingImage from "../_assets/example-marketing.webp"
-import portfolioImage from "../_assets/example-portfolio.webp"
+import marketingImage from "../_assets/example-relevant-file.webp"
+import portfolioImage from "../_assets/example-revenue-record.webp"
+import freesearchImage from "../_assets/example-bank-cases.webp"
+import revenuerecordsImage from "../_assets/example-case-detail.webp"
 
 type Item = {
 	title: string
@@ -21,57 +23,57 @@ type Item = {
 
 const items: Item[] = [
 	{
-		title: "Blogs",
+		title: "Automatic Title Chain",
 		description:
-			"Build personal and professional blogs with Astro's built-in Markdown support and content APIs.",
-		liveUrl: new URL("https://firebase.blog/"),
-		image: blogsImage,
-		cta: {
-			text: "Blog themes",
-			href: "/themes/?categories%5B%5D=blog",
-		},
-	},
-	{
-		title: "Marketing",
-		description: "Stand out from the crowd with a lightning fast site that ranks higher in SEO.",
-		liveUrl: new URL("https://rokt.com/"),
+			"System automatically finds relevant Title Chain for each property.",
+		liveUrl: new URL("https://uat.bhume.in/"),
 		image: marketingImage,
 		cta: {
-			text: "Marketing themes",
-			href: "/themes/?categories%5B%5D=landing-page",
+			text: "",
+			href: "",
 		},
 	},
 	{
-		title: "Agencies",
+		title: "Bank wise Cases",
 		description:
-			"Agencies use Astro to build fast websites, faster. Customize every site with full control over your frontend code.",
-		liveUrl: new URL("https://www.thinkmill.com.au/"),
-		image: agenciesImage,
+			"Access all priority cases on one screen. View lender-wise history of all cases with their status.",
+		liveUrl: new URL("https://freesearchigrservice.maharashtra.gov.in/"),
+		image: freesearchImage,
 		cta: {
-			text: "Agency themes",
-			href: "/themes/?categories%5B%5D=landing-page",
+			text: "",
+			href: "",
 		},
 	},
 	{
-		title: "E-Commerce",
-		description:
-			"Time is money. Give your customers a better shopping experience and grow your business faster.",
-		liveUrl: new URL("https://happyplates.com/"),
-		image: eCommerceImage,
+		title: "IGR data",
+		description: "Save valuable time by downloading registry data automatically in minutes as compared to hours.",
+		liveUrl: new URL("https://bhulekh.mahabhumi.gov.in/"),
+		image: revenuerecordsImage,
 		cta: {
-			text: "E-Commerce themes",
-			href: "/themes/?categories%5B%5D=ecommerce",
+			text: "",
+			href: "",
 		},
 	},
+	// {
+	// 	title: "Litigation Search",
+	// 	description:
+	// 		"Search our vast database covering 200mn cases from 10,000 courts across India.",
+	// 	liveUrl: new URL("https://bhulekh.mahabhumi.gov.in/"),
+	// 	image: agenciesImage,
+	// 	cta: {
+	// 		text: "",
+	// 		href: "",
+	// 	},
+	// },
 	{
-		title: "Portfolios",
+		title: "Revenue Records",
 		description:
-			"Put your best foot forward with a portfolio that performs. Help people get to know you (and your work) faster.",
-		liveUrl: new URL("https://baldbeardedbuilder.com/"),
+			"Fetch up-to-date revenue records automatically from government website.",
+		liveUrl: new URL("https://bhulekh.mahabhumi.gov.in/"),
 		image: portfolioImage,
 		cta: {
-			text: "Portfolio themes",
-			href: "/themes/?categories%5B%5D=portfolio",
+			text: "",
+			href: "",
 		},
 	},
 ]
@@ -120,7 +122,7 @@ export default function ExampleShowcase() {
 											{item.cta.text}
 										</a>
 										<a href={item.liveUrl.href} class="link-underline">
-											See it in the wild
+											Learn more
 										</a>
 									</p>
 								</Collapse>
@@ -156,6 +158,8 @@ export default function ExampleShowcase() {
 								"--position": positiveMod(index() - (current() ?? 0), items.length),
 								"--translate": `calc(var(--position) * ${titleHeight}px)`,
 								"z-index": `calc(${items.length} - var(--position))`,
+								"border-width": "5px",
+								"border-radius": "12px"
 							}}
 							class={clsx(
 								"panel left-0 top-0 block w-full",
@@ -164,9 +168,9 @@ export default function ExampleShowcase() {
 							)}
 							data-card
 						>
-							<p class="code flex items-center justify-center py-1 text-sm" aria-hidden="true">
+							{/* <p class="code flex items-center justify-center py-1 text-sm" aria-hidden="true">
 								{item.liveUrl.hostname}
-							</p>
+							</p> */}
 							<img
 								src={item.image.src}
 								width={item.image.width}
@@ -175,6 +179,9 @@ export default function ExampleShowcase() {
 								class="w-full object-cover object-left-top"
 								loading="lazy"
 								decoding="async"
+								style={{
+									"border-radius": "9px"
+								}}
 							/>
 						</a>
 					)}

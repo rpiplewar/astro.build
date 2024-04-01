@@ -31,3 +31,11 @@ pnpm-debug.log*
 
 # Local Vercel folder
 .vercel
+
+./src/pages/api
+./src/pages/blog
+./src/pages/case-studies
+./src/pages/db
+./src/pages/integrations
+./src/pages/newsletter
+./src/pages/on

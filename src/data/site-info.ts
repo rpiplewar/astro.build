@@ -19,43 +19,43 @@ export type SiteInfo = {
 }
 
 const siteInfo: SiteInfo = {
-	name: "Astro",
-	title: "Build the web you want",
+	name: "BhuMe",
+	title: "The AI co-pilot for Mortgage Lawyers",
 	description:
-		"Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
+		"BhuMe speeds up the due diligence process by 10X using large language models.",
 	image: {
 		src: "/og/social.jpg",
-		alt: "Build the web you want",
+		alt: "AI co-pilot for Mortgage Lawyers",
 	},
 	socialLinks: [
-		{
-			platform: "github",
-			href: "https://github.com/withastro/astro",
-			me: "https://github.com/withastro/",
-			text: "Go to Astro's GitHub repo",
-			icon: "social/github",
-		},
-		{
-			platform: "discord",
-			href: "/chat",
-			text: "Join the Astro community on Discord",
-			icon: "social/discord",
-		},
+		// {
+		// 	platform: "github",
+		// 	href: "https://github.com/withastro/astro",
+		// 	me: "https://github.com/withastro/",
+		// 	text: "Go to Astro's GitHub repo",
+		// 	icon: "social/github",
+		// },
+		// {
+		// 	platform: "discord",
+		// 	href: "/chat",
+		// 	text: "Join the Astro community on Discord",
+		// 	icon: "social/discord",
+		// },
 		{
 			platform: "twitter",
-			href: "https://twitter.com/astrodotbuild",
-			me: "https://twitter.com/astrodotbuild",
-			text: "Follow Astro on Twitter",
+			href: "https://twitter.com/rajatpiplewar",
+			me: "https://twitter.com/rajatpiplewar",
+			text: "Follow Our team on Twitter",
 			icon: "social/twitter",
 		},
-		{
-			platform: "mastodon",
-			href: "https://m.webtoo.ls/@astro",
-			me: "https://m.webtoo.ls/@astro",
-			text: "Follow Astro on Mastodon",
-			footerOnly: true,
-			icon: "social/mastodon",
-		},
+		// {
+		// 	platform: "mastodon",
+		// 	href: "https://m.webtoo.ls/@astro",
+		// 	me: "https://m.webtoo.ls/@astro",
+		// 	text: "Follow Astro on Mastodon",
+		// 	footerOnly: true,
+		// 	icon: "social/mastodon",
+		// },
 	],
 }
 
